@@ -1,0 +1,312 @@
+2019-06-10 01:33:10 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "SELECT ALL[*]"; oczekiwano "*, NOT, EXISTS, INTERSECTS"
+Syntax error in SQL statement "SELECT ALL[*]"; expected "*, NOT, EXISTS, INTERSECTS"; SQL statement:
+SELECT ALL [42001-199]
+2019-06-10 01:33:14 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "SELECT * ALL[*]"
+Syntax error in SQL statement "SELECT * ALL[*]"; SQL statement:
+SELECT * ALL [42000-199]
+2019-06-10 01:35:42 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "SELECT ALL[*]"; oczekiwano "*, NOT, EXISTS, INTERSECTS"
+Syntax error in SQL statement "SELECT ALL[*]"; expected "*, NOT, EXISTS, INTERSECTS"; SQL statement:
+SELECT ALL [42001-199]
+2019-06-10 01:35:48 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "SELECT * ALL[*]"
+Syntax error in SQL statement "SELECT * ALL[*]"; SQL statement:
+SELECT * ALL [42000-199]
+2019-06-10 01:35:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "SELECT * PRODUCT[*]"
+Syntax error in SQL statement "SELECT * PRODUCT[*]"; SQL statement:
+SELECT * PRODUCT [42000-199]
+2019-06-10 01:35:59 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "SELECT * PRODUCT[*]"
+Syntax error in SQL statement "SELECT * PRODUCT[*]"; SQL statement:
+SELECT * PRODUCT [42000-199]
+2019-06-10 01:35:59 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "SELECT * PRODUCT[*]"
+Syntax error in SQL statement "SELECT * PRODUCT[*]"; SQL statement:
+SELECT * PRODUCT [42000-199]
+2019-06-10 02:29:15 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "SELECT * PRODUCT[*] "
+Syntax error in SQL statement "SELECT * PRODUCT[*] "; SQL statement:
+Select * product [42000-199]
+2019-06-10 02:29:25 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Kolumna "PRODUCT" nie istnieje
+Column "PRODUCT" not found; SQL statement:
+SELECT ALL PRODUCT [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:176)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:158)
+	at org.h2.command.dml.Select.prepare(Select.java:1245)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1113)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1436)
+	at org.h2.server.web.WebApp.query(WebApp.java:1111)
+	at org.h2.server.web.WebApp.query(WebApp.java:1087)
+	at org.h2.server.web.WebApp.process(WebApp.java:237)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:121)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:158)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1747)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-06-10 02:29:26 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Kolumna "PRODUCT" nie istnieje
+Column "PRODUCT" not found; SQL statement:
+SELECT ALL PRODUCT [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:176)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:158)
+	at org.h2.command.dml.Select.prepare(Select.java:1245)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1113)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1436)
+	at org.h2.server.web.WebApp.query(WebApp.java:1111)
+	at org.h2.server.web.WebApp.query(WebApp.java:1087)
+	at org.h2.server.web.WebApp.process(WebApp.java:237)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:121)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:158)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1747)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-06-10 02:29:26 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Kolumna "PRODUCT" nie istnieje
+Column "PRODUCT" not found; SQL statement:
+SELECT ALL PRODUCT [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:176)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:158)
+	at org.h2.command.dml.Select.prepare(Select.java:1245)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1113)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1436)
+	at org.h2.server.web.WebApp.query(WebApp.java:1111)
+	at org.h2.server.web.WebApp.query(WebApp.java:1087)
+	at org.h2.server.web.WebApp.process(WebApp.java:237)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:121)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:158)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1747)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-06-10 02:29:26 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Kolumna "PRODUCT" nie istnieje
+Column "PRODUCT" not found; SQL statement:
+SELECT ALL PRODUCT [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:176)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:158)
+	at org.h2.command.dml.Select.prepare(Select.java:1245)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1113)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1436)
+	at org.h2.server.web.WebApp.query(WebApp.java:1111)
+	at org.h2.server.web.WebApp.query(WebApp.java:1087)
+	at org.h2.server.web.WebApp.process(WebApp.java:237)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:121)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:158)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1747)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-06-10 02:29:40 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "PRODUCT[*]"; oczekiwano "PREPARE"
+Syntax error in SQL statement "PRODUCT[*]"; expected "PREPARE"; SQL statement:
+PRODUCT [42001-199]
+2019-06-10 02:29:41 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "PRODUCT[*]"; oczekiwano "PREPARE"
+Syntax error in SQL statement "PRODUCT[*]"; expected "PREPARE"; SQL statement:
+PRODUCT [42001-199]
+2019-06-10 02:29:41 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "PRODUCT[*]"; oczekiwano "PREPARE"
+Syntax error in SQL statement "PRODUCT[*]"; expected "PREPARE"; SQL statement:
+PRODUCT [42001-199]
+2019-06-10 02:29:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "PRODUCT[*] SELECT ALL"; oczekiwano "PREPARE"
+Syntax error in SQL statement "PRODUCT[*] SELECT ALL"; expected "PREPARE"; SQL statement:
+PRODUCT SELECT ALL [42001-199]
+2019-06-10 02:29:45 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "PRODUCT[*] SELECT ALL"; oczekiwano "PREPARE"
+Syntax error in SQL statement "PRODUCT[*] SELECT ALL"; expected "PREPARE"; SQL statement:
+PRODUCT SELECT ALL [42001-199]
+2019-06-10 02:29:45 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "PRODUCT[*] SELECT ALL"; oczekiwano "PREPARE"
+Syntax error in SQL statement "PRODUCT[*] SELECT ALL"; expected "PREPARE"; SQL statement:
+PRODUCT SELECT ALL [42001-199]
+2019-06-10 02:30:28 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "SELECT ALL FROM PRODUCT[*]"; oczekiwano "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"
+Syntax error in SQL statement "SELECT ALL FROM PRODUCT[*]"; expected "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+SELECT ALL FROM PRODUCT [42001-199]

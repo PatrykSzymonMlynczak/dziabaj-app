@@ -13,7 +13,7 @@ import pl.manciak.dziabajapp.manager.ProductManager;
 import java.util.*;
 
 @RestController
-@RequestMapping("/meal")
+@RequestMapping("/meals")
 public class MealController {
 
     private ProductManager productManager;
@@ -53,45 +53,6 @@ public class MealController {
         return mealModel.map.entrySet().toString();
     }
 
-
-    ////////////////// W TRAKCIE ROZBUDOWY ///////////////////////////////
-    /////////////////////////////////////////////////////////////////////
-    @PutMapping("/{name}/update")
-    public String updateMeal(@RequestBody  MealModel mealModel){
-
-       System.out.println( mealManager.findByName("salatka6").isPresent());
-       Meal meal = mealManager.findByName("salatka6").get();
-
-       for(Map.Entry<Product, Gram> mapa : meal.getProductsWithWeight().entrySet())
-       {
-           if( mapa.getKey().getId() == 1){
-               Gram gram = new Gram(999F);
-               mapa.setValue(gram);
-           }
-       }
-        mealManager.save(meal);
-
-       /* if(mealManager.findByName(mealModel.getName()).isPresent() == true) {
-
-            Map<Product, Gram> productsWithGrams = new HashMap<>();
-
-            for (HashMap.Entry<String, String> entry : mealModel.map.entrySet()) {
-                Gram weight = new Gram();
-                weight.setWeight(Float.parseFloat(entry.getValue()));
-                gramManager.save(weight);
-
-                productsWithGrams.put(
-                        productManager.findById(Long.parseLong(entry.getKey())).get(),
-                        gramManager.findLast().get()
-                );
-            }
-
-           // Meal meal = new Meal(mealModel.name, productsWithGrams);
-           // mealManager.save(meal);
-        }else return "Nie ma takiego posiłku w bazie";
-*/
-        return mealModel.map.entrySet().toString();
-    }
 
     @DeleteMapping("/{index}")
     public void deleteMelal(@PathVariable Long index){

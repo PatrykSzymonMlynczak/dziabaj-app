@@ -19,7 +19,7 @@ public class ProductController {
         this.productManager = productManager;
     }
 
-    @GetMapping( "/all")
+    @GetMapping
     public Iterable<Product> showAllProducts(){
         return productManager.findAll();
     }

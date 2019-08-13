@@ -2,6 +2,8 @@ package pl.manciak.dziabajapp.api;
 
 import org.springframework.web.bind.annotation.*;
 
+////////////////PIERDOŁY/////////////////
+////////////////PIERDOŁY/////////////////
 
 @RestController
 public class DziabajApi {

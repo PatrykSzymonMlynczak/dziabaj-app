@@ -10,19 +10,20 @@ import pl.manciak.dziabajapp.dao.entity.Product;
 import java.util.Optional;
 
 @Service
-public class ProductManager {
+public class ProductManager  {
 
-
-    public ProductRepo repo;
+    private ProductRepo repo;
 
     @Autowired
     ProductManager(ProductRepo repo){
         this.repo = repo;
     }
 
-    public Optional<Product> findById(Long id){
+    public Optional<Product> findById(long id){
         return repo.findById(id);
     }
+
+    public Optional<Product> findByName(String name){ return repo.findByName(name); }
 
     public Iterable<Product> findAll(){
         return repo.findAll();
@@ -38,9 +39,12 @@ public class ProductManager {
 
     @EventListener(ApplicationReadyEvent.class)
     public void fillDB(){
-        save(new Product( "Marchew", 200));
-        save(new Product( "Jabłko", 200));
-        save(new Product( "Kapusta Biała", 200));
+
+        save(new Product( "Marchew", 200F, 2.22F, 1F,1F,1F));
+        save(new Product( "Gruszka", 110F, 3.33F, 1F,1F,1F));
+        save(new Product( "Jajko", 220F, 3.33F, 1F,1F,1F));
+        save(new Product( "Jabłko", 150F, 3.33F, 1F,1F,1F));
+        save(new Product( "Jarmóż", 100F, 3.33F, 1F,1F,1F));
     }
 
 }

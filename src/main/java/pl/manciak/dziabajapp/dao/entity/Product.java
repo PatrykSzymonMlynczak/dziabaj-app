@@ -1,27 +1,31 @@
 package pl.manciak.dziabajapp.dao.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "products")
 public class Product {
 
-
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
+    @Id()
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String name;
-    private Integer calories;
+    private Float calories;
+    private Float carbohydrates;
+    private Float protein;
+    private Float fat;
+    private Float price;
 
-    public Product() {}
+    public Product(){}
 
-    public Product( String name, Integer calories) {
-
+    public Product(String name, Float calories, Float carbohydrates, Float protein, Float fat, Float price ) {
         this.name = name;
         this.calories = calories;
+        this.carbohydrates = carbohydrates;
+        this.protein = protein;
+        this.fat = fat;
+        this.price = price;
     }
 
     public Long getId() {
@@ -40,11 +44,57 @@ public class Product {
         this.name = name;
     }
 
-    public Integer getCalories() {
+    public Float getCalories() {
         return calories;
     }
 
-    public void setCalories(Integer calories) {
+    public void setCalories(Float calories) {
         this.calories = calories;
     }
+
+    public Float getCarbohydrates() {
+        return carbohydrates;
+    }
+
+    public void setCarbohydrates(Float carbohydrates) {
+        this.carbohydrates = carbohydrates;
+    }
+
+    public Float getProtein() {
+        return protein;
+    }
+
+    public void setProtein(Float protein) {
+        this.protein = protein;
+    }
+
+    public Float getFat() {
+        return fat;
+    }
+
+    public void setFat(Float fat) {
+        this.fat = fat;
+    }
+
+    public Float getPrice() {
+        return price;
+    }
+
+    public void setPrice(Float price) {
+        this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "product_ID=" + id +
+                ", name='" + name + '\'' +
+                ", calories=" + calories +
+                ", carbohydrates=" + carbohydrates +
+                ", protein=" + protein +
+                ", fat=" + fat +
+                ", price=" + price +
+                '}';
+    }
+
 }
